@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather/core/utils/app_router.dart';
 import 'package:weather/home/presentation/views/widgets/no_weather_info.dart';
 
 void main() {
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: NoWeatherInfo()
+    return  MaterialApp.router(
+     routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
