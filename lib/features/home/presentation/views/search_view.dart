@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_cubit.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_states.dart';
+import 'package:weather/features/home/presentation/view_models/weather_cubit/weather_cubit.dart';
+
+import '../view_models/weather_cubit/weather_states.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});

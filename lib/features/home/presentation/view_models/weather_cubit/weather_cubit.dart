@@ -1,10 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather/core/api/end_points.dart';
 import 'package:weather/core/errors/exception.dart';
-import 'package:weather/home/data/models/weather_model.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_states.dart';
+import 'package:weather/features/home/data/models/weather_model.dart';
+import 'package:weather/features/home/presentation/view_models/weather_cubit/weather_states.dart';
 
-import '../../../../../core/api/api_helper.dart';
+
+import '../../../../../../core/api/api_helper.dart';
 
 class WeatherCubit extends Cubit<WeatherStates> {
   final ApiHelper apiHelper;

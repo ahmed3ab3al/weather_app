@@ -5,9 +5,9 @@ import 'package:weather/constant.dart';
 import 'package:weather/core/api/dio_helper.dart';
 import 'package:weather/core/bloc/bloc_observer.dart';
 import 'package:weather/core/utils/app_router.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_cubit.dart';
+import 'package:weather/features/home/presentation/view_models/weather_cubit/weather_cubit.dart';
 
-import 'home/presentation/view_models/weather_cubit/weather_states.dart';
+import 'features/home/presentation/view_models/weather_cubit/weather_states.dart';
 
 void main() {
   Bloc.observer = MyBlocObserver();

@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:weather/home/presentation/views/home_view.dart';
-import 'package:weather/home/presentation/views/search_view.dart';
+import 'package:weather/features/home/presentation/views/home_view.dart';
+import 'package:weather/features/home/presentation/views/search_view.dart';
 
 abstract class AppRouter {
   static const kSearch = '/search';

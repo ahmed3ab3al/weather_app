@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_cubit.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_states.dart';
-import 'package:weather/home/presentation/views/search_view.dart';
-import 'package:weather/home/presentation/views/widgets/no_weather_info.dart';
-import 'package:weather/home/presentation/views/widgets/weather_info.dart';
+import 'package:weather/features/home/presentation/view_models/weather_cubit/weather_cubit.dart';
+import 'package:weather/features/home/presentation/views/widgets/no_weather_info.dart';
+import 'package:weather/features/home/presentation/views/search_view.dart';
+import 'package:weather/features/home/presentation/views/widgets/weather_info.dart';
+
+import '../view_models/weather_cubit/weather_states.dart';
 
 
 class HomeView extends StatelessWidget {

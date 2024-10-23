@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:weather/home/data/models/weather_model.dart';
-import 'package:weather/home/presentation/view_models/weather_cubit/weather_cubit.dart';
+import 'package:weather/features/home/presentation/view_models/weather_cubit/weather_cubit.dart';
 
-import '../../../../constant.dart';
+import '../../../../../constant.dart';
+import '../../../data/models/weather_model.dart';
 
 class WeatherInfoBody extends StatelessWidget {
   const WeatherInfoBody({super.key, required this.weatherModel});

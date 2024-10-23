@@ -1,5 +1,6 @@
 
-import 'package:weather/home/data/models/weather_model.dart';
+
+import '../../../data/models/weather_model.dart';
 
 abstract class WeatherStates {}
 
