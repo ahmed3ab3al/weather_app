@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
+import 'package:weather/home/presentation/views/home_view.dart';
 import 'package:weather/home/presentation/views/search_view.dart';
-import 'package:weather/home/presentation/views/widgets/no_weather_info.dart';
 
 abstract class AppRouter {
   static const kSearch = '/search';
@@ -10,7 +10,7 @@ abstract class AppRouter {
 
       GoRoute(
         path: '/',
-        builder: (context, state) => const NoWeatherInfo(),
+        builder: (context, state) => const HomeView(),
       ),
       GoRoute(
         path: kSearch,

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather/core/bloc/bloc_observer.dart';
 import 'package:weather/core/utils/app_router.dart';
-import 'package:weather/home/presentation/views/widgets/no_weather_info.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 
@@ -17,4 +19,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
