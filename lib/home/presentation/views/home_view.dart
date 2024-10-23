@@ -34,7 +34,7 @@ class HomeView extends StatelessWidget {
                   weatherModel: state.weatherModel,
                 );
               } else {
-                return const Text('oops something went wrong');
+                return const Center(child: CircularProgressIndicator());
               }
             }));
   }
