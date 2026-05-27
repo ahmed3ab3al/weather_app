@@ -6,6 +6,13 @@ class SearchView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(), body: SearchViewBody());
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Search City', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blue,
+        iconTheme: IconThemeData(color: Colors.white, size: 25),
+      ),
+      body: SearchViewBody(),
+    );
   }
 }

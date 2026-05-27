@@ -9,14 +9,22 @@ class SearchViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomField(
-          controller: controller,
-          validator: (value) {},
-          border: OutlineInputBorder(),
-          type: TextInputType.text,
-          label: 'Search',
-          prefixIcon: Icons.search,
+        Spacer(),
+        Padding(
+          padding: const EdgeInsets.all(16),
+          child: Center(
+            child: CustomField(
+              padding: EdgeInsets.symmetric(vertical: 30),
+              controller: controller,
+              validator: (value) {},
+              border: OutlineInputBorder(),
+              type: TextInputType.text,
+              label: 'Search',
+              prefixIcon: Icons.search,
+            ),
+          ),
         ),
+        Spacer(flex: 3),
       ],
     );
   }

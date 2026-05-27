@@ -12,6 +12,7 @@ class CustomField extends StatelessWidget {
   final ValueChanged<String>? onSubmited;
   final bool? filled;
   final Color? filledColor;
+  final EdgeInsetsGeometry? padding;
   final Color? cursorColor;
   final InputBorder border;
   final TextInputType type;
@@ -41,7 +42,7 @@ class CustomField extends StatelessWidget {
     this.labelStyle,
     this.filled,
     this.filledColor,
-     this.cursorColor, this.onSubmited,
+     this.cursorColor, this.onSubmited, this.padding,
   });
 
   @override
@@ -58,6 +59,7 @@ class CustomField extends StatelessWidget {
         prefixIcon: Icon(prefixIcon),
 
         labelText: label,
+        contentPadding: padding,
         focusedBorder: border,
         enabledBorder: border,
         focusedErrorBorder: border,

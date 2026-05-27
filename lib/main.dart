@@ -12,12 +12,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false, home: HomeView());
   }
 }
-  Future<dynamic> navigateTo(BuildContext context, Widget screen) {
-    return Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (context) {
-          return screen;
-        },
-      ),
-    );
-  }
+
+Future<dynamic> navigateTo(BuildContext context, Widget screen) {
+  return Navigator.of(context).push(
+    MaterialPageRoute(
+      builder: (context) {
+        return screen;
+      },
+    ),
+  );
+}
+  //https://api.weatherapi.com/v1/forecast.json?key=d72348b28fa742a993c141142262705&q=London
