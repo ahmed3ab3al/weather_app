@@ -1,15 +1,14 @@
+
 import 'package:weather_app/core/api/end_points.dart';
 
 class ErrorModel {
   final String errorMessage;
-  final int status;
 
-  ErrorModel({required this.errorMessage, required this.status});
+  ErrorModel({required this.errorMessage,});
 
   factory ErrorModel.fromjson(Map<String, dynamic> jsonData) {
     return ErrorModel(
-      errorMessage: jsonData[ApiKeys.errorMessage],
-      status: jsonData[ApiKeys.status],
+      errorMessage: jsonData[ApiKeys.errorMap][ApiKeys.errorMessage],
     );
   }
 }

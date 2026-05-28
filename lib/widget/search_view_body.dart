@@ -16,7 +16,10 @@ class SearchViewBody extends StatelessWidget {
             child: CustomField(
               padding: EdgeInsets.symmetric(vertical: 30),
               controller: controller,
-              validator: (value) {},
+              validator: (value) {
+                return null;
+              },
+              onchange: (value){},
               border: OutlineInputBorder(),
               type: TextInputType.text,
               label: 'Search',
