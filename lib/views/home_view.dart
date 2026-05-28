@@ -7,6 +7,7 @@ import 'package:weather_app/cubit/states.dart';
 import 'package:weather_app/main.dart';
 import 'package:weather_app/views/search_view.dart';
 import 'package:weather_app/widget/no_weather_info.dart';
+import 'package:weather_app/widget/weather_info_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -34,7 +35,7 @@ class HomeView extends StatelessWidget {
                 ),
               ],
             ),
-            body: NoWeatherInfoBody(),
+            body: WeatherInfoBody(),
           );
         },
       ),

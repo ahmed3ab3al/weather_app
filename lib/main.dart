@@ -25,4 +25,3 @@ Future<dynamic> navigateTo(BuildContext context, Widget screen) {
     ),
   );
 }
-  //https://api.weatherapi.com/v1/forecast.json?key=d72348b28fa742a993c141142262705&q=London
