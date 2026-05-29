@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class NoWeatherInfoBody extends StatelessWidget {
   const NoWeatherInfoBody({super.key});
+  
 
   @override
   Widget build(BuildContext context) {

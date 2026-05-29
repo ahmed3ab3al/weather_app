@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/cubit/cubit.dart';
+import 'package:weather_app/models/weather_model.dart';
 
 class WeatherInfoBody extends StatelessWidget {
   const WeatherInfoBody({super.key});
 
   @override
   Widget build(BuildContext context) {
+    WeatherModel weatherModel = AppCubit.get(context).weatherModel!;
     return Column(
       children: [
         Spacer(),
         Text(
-          'Alexandria',
+          weatherModel.cityName,
           style: TextStyle(
             color: Colors.black,
             fontSize: 35,
@@ -24,24 +27,29 @@ class WeatherInfoBody extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Icon(Icons.male, size: 60),
+            Image.network('https:${weatherModel.image}'),
             Text(
-              '18',
+              weatherModel.temp.round().toString(),
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 40,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Column(children: [Text('Max Temp : 20'), Text('Min Temp : 20')]),
+            Column(
+              children: [
+                Text('Max Temp : ${weatherModel.maxTemp.round()}'),
+                Text('Min Temp : ${weatherModel.minTemp.round()}'),
+              ],
+            ),
           ],
         ),
         SizedBox(height: 50),
         Text(
-          'Light Rain',
+          weatherModel.weatherCondition,
           style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
         ),
-        Spacer(),
+        Spacer(flex: 2),
       ],
     );
   }

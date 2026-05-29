@@ -11,7 +11,7 @@ class AppCubit extends Cubit<AppStates> {
   AppCubit({required this.api}) : super(AppInitialStates());
   static AppCubit get(BuildContext context) => BlocProvider.of(context);
 
-  late WeatherModel weatherModel;
+   WeatherModel? weatherModel;
 
   Future<WeatherModel> getWeather({
     required String city,
@@ -33,6 +33,6 @@ class AppCubit extends Cubit<AppStates> {
       emit(WeatherFailureStates(error: e.errorModel.errorMessage));
      
     }
-    return weatherModel;
+    return weatherModel!;
   }
 }
