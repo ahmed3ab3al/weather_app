@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/constants.dart';
 import 'package:weather_app/cubit/states.dart';
-import 'package:weather_app/main.dart';
 import 'package:weather_app/views/search_view.dart';
 import 'package:weather_app/widget/no_weather_info.dart';
 import 'package:weather_app/widget/weather_info_body.dart';
@@ -35,7 +35,7 @@ class HomeView extends StatelessWidget {
           if (state is AppInitialStates) {
             return NoWeatherInfoBody();
           } else if (state is WeatherSuccessStates) {
-            return WeatherInfoBody();
+            return const WeatherInfoBody();
           } else if (state is WeatherLoadingStates) {
             return Center(child: CircularProgressIndicator());
           } else {

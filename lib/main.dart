@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/constants.dart';
 import 'package:weather_app/core/api/dio_consumer.dart';
 import 'package:weather_app/cubit/bloc_observer.dart';
 import 'package:weather_app/cubit/cubit.dart';
@@ -19,10 +20,14 @@ class MyApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => AppCubit(api: DioConsumer(dio: Dio())),
       child: BlocConsumer<AppCubit, AppStates>(
-        listener: (context, state) {
-        },
+        listener: (context, state) {},
         builder: (context, state) {
           return MaterialApp(
+            theme: ThemeData(
+              colorSchemeSeed: createMaterialColor(
+                AppCubit.get(context).weatherModel?.weatherCondition,
+              ),
+            ),
             debugShowCheckedModeBanner: false,
             home: HomeView(),
           );
@@ -30,14 +35,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-}
-
-Future<dynamic> navigateTo(BuildContext context, Widget screen) {
-  return Navigator.of(context).push(
-    MaterialPageRoute(
-      builder: (context) {
-        return screen;
-      },
-    ),
-  );
 }
