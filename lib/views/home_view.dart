@@ -15,7 +15,6 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
         title: Text(
           'Weather App',
           style: TextStyle(color: Colors.white, fontSize: 25),

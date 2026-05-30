@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/constants.dart';
 import 'package:weather_app/cubit/cubit.dart';
 import 'package:weather_app/cubit/states.dart';
 import 'package:weather_app/widget/custom_text_field.dart';
@@ -17,7 +18,6 @@ class SearchView extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: Text('Search City', style: TextStyle(color: Colors.white)),
-            backgroundColor: Colors.blue,
             iconTheme: IconThemeData(color: Colors.white, size: 25),
           ),
           body: Column(
@@ -36,9 +36,20 @@ class SearchView extends StatelessWidget {
                       AppCubit.get(context).getWeather(city: value, day: 1);
                       Navigator.pop(context);
                     },
-                    border: OutlineInputBorder(),
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: createMaterialColor(
+                          AppCubit.get(context).weatherModel?.weatherCondition,
+                        ),
+                      ),
+                    ),
                     type: TextInputType.text,
                     label: 'Search',
+                    labelStyle: TextStyle(
+                      color: createMaterialColor(
+                        AppCubit.get(context).weatherModel?.weatherCondition,
+                      ),
+                    ),
                     prefixIcon: Icons.search,
                   ),
                 ),

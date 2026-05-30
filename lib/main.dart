@@ -24,8 +24,16 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           return MaterialApp(
             theme: ThemeData(
-              colorSchemeSeed: createMaterialColor(
-                AppCubit.get(context).weatherModel?.weatherCondition,
+              colorScheme: ColorScheme.fromSeed(
+                seedColor: createMaterialColor(
+                  AppCubit.get(context).weatherModel?.weatherCondition,
+                ),
+              ),
+
+              appBarTheme: AppBarTheme(
+                backgroundColor: createMaterialColor(
+                  AppCubit.get(context).weatherModel?.weatherCondition,
+                ),
               ),
             ),
             debugShowCheckedModeBanner: false,
